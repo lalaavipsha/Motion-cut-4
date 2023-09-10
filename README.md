@@ -1,73 +1,44 @@
 # Kanban Board
 
-It is a student registration form that uses JSONPowerDB to store user information. Both serverless technologies and REST APIs are supported. A student's roll number can be used to add or edit them. The roll number is automatically verified on this form, and with the use of an API, the data submitted into other input fields is also verified so that the user may change as necessary. AJAX requests are used by the program to provide quick and seamless interaction. Any type of data, including integers, strings, dates, etc., may be saved.
+This is a Kanban Board the same as you have in JIRA, Monday, and Trello. I have added a beautiful drag-and-drop feature using React, Socket.io, and React Beautiful DND. Users will be able to sign in, create and update various tasks, and add comments. The comments section serves as the task description as well! One can add the task description as well as their views about the task in this section.
 
 
+## Benefits of using the Kanban Board
+
+1. **Visual Organization:** Kanban boards provide a clear visual representation of work items and their progress, making it easy to see what needs to be done.
+
+2. **Efficient Workflow:** They help teams streamline their workflow, reduce bottlenecks, and improve the efficiency of task completion.
+
+3. **Effective Prioritization:** Kanban boards help prioritize tasks, ensuring that the most important work is addressed first.
+
+4. **Real-Time Updates:** Team members have real-time access to task status, promoting transparency and collaboration.
+
+5. **Flexibility:** Kanban is adaptable to changing project requirements, allowing teams to adjust their tasks and priorities as needed.
 
 
-## Benefits of using JsonPowerDB
+# kanban_server
 
-- Capable of storing huge data together with other file formats and organized, semi-structured, and unstructured data.
-- Using CRUD operations while subject to dynamic relational restrictions. Relational data management is possible without PK, FK, UK, pre-defining databases,   
-  tables, etc.
-- Unrestricted by technology - Low-Code and simple to use through HTTP Rest AP from any technology.
-- Reduces development costs, develops more quickly, and has minimal learning curves.
-- Aids programmers in maintaining their databases with a variety of tools and methods.
+#### How to start the server-side code
 
+- CD into the folder after cloning.
+- Run: `npm install`
+- Run: `npm start`
+The server will be started at http://localhost:5000/api
 
+# kanban_client
 
-## Release History
-### JsonPowerDB
-**Version:** 2.0
-#### API Execution
+#### How to start the client-side code
 
-```
-var baseUrl = "http://api.login2explore.com:5577";
-function executeCommand(reqString, apiEndPointUrl) {
-    var url = baseUrl + apiEndPointUrl;
-    var jsonObj;
-    
-    $.post(url, reqString, function (result) {
-        jsonObj = JSON.parse(result);
-    }).fail(function (result) {
-        var dataJsonObj = result.responseText;
-        jsonObj = JSON.parse(dataJsonObj);
-    });
-    return jsonObj;
-}
-```
-#### Create a PUT Request String
-```
-function createPUTRequest(connToken, jsonObj, dbName, relName) {
-    var putRequest = "{\n"
-            + "\"token\" : \""
-            + connToken
-            + "\","
-            + "\"dbName\": \""
-            + dbName
-            + "\",\n" + "\"cmd\" : \"PUT\",\n"
-            + "\"rel\" : \""
-            + relName + "\","
-            + "\"jsonStr\": \n"
-            + jsonObj
-            + "\n"
-            + "}";
-    return putRequest;
-}
-
-```
-
-## Features of the Form
-
--Simple to use
--Quick response
--A thorough user interface
+- CD into the folder client folder after cloning
+- Run: `npm install`
+- Run: `npm run dev`
+- Application will be started at `http://localhost:5173`
 
 ## Tech Stack used
 
-**Client:** HTML, CSS, Javascript
+**Client:** HTML, CSS, Javascript, ReactJs.
 
-**Server:** JsonPowerDB
+**Server:** NodeJs
 
 
 ## Screenshots:
