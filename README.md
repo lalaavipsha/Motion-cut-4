@@ -1,11 +1,11 @@
-# Kanban Board
+# TO-DO List
 ![image](https://github.com/lalaavipsha/Kanban/assets/53574326/2698f24a-4fb7-42bb-a6ba-9f3d769e76cb)
 
 
 This is a Kanban Board the same as you have in JIRA, Monday, and Trello. I have added a beautiful drag-and-drop feature using React, Socket.io, and React Beautiful DND. Users will be able to sign in, create and update various tasks, and add comments. The comments section serves as the task description as well! One can add the task description as well as their views about the task in this section.
 
 
-## Benefits of using the Kanban Board
+## Benefits of using the Kanban board or a TO-DO List
 
 1. **Visual Organization:** Kanban boards provide a clear visual representation of work items and their progress, making it easy to see what needs to be done.
 
